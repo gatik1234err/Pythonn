@@ -81,7 +81,7 @@ def check_password_strength():
     else:
         remarks = "Fortress: Unbreakable."
 
-    print("\nForge Analysis:")
+    print("\n Analysis:")
     print(f"{lower} lowercase | {upper} uppercase | {num} digits | {special} specials | {wspace} spaces")
     print(f"Entropy: {entropy:.2f} bits")
     print(f"HIBP: {pwned_status}")
@@ -92,12 +92,12 @@ def check_password_strength():
 
 def check_another():
     while True:
-        choice = input("Forge another? (y/n): ").strip().lower()
+        choice = input("Another? (y/n): ").strip().lower()
         return choice == 'y'
 
 
 if __name__ == '__main__':
-    print("HIBP Password Forge")
+    print("HIBP Password Strength Checker")
     while True:
         check_password_strength()
         if not check_another():
